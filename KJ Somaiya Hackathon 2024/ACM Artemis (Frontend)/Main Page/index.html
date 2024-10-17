@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherNow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <header>
+            <div class="container header-content">
+                <h1>WeatherInfo</h1> 
+                <h1><a href="../Alert Page/index.html" class="no-underline">Alerts</a></h1>
+                <div class="search-container">
+                    <input type="text" id="citySearch" placeholder="Search for a city...">
+                    <button id="searchButton" aria-label="Search">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    </button>
+                </div>
+                <div class="points-card">
+                    <p class="large" id="userPoints">1250</p>
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/points-icon-bimkCgShdgRwErtvjmSjA1ZBHDVGpA.png" alt="Points star" class="points-icon">
+                </div>
+            </div>
+        </header>
+
+        <main class="container">
+            <div class="weather-grid">
+                <div class="column">
+                    <div class="card dashboard-card hover-card">
+                        <h3>Dashboard</h3>
+                        <p>Analysis of Rain in Regions</p>
+                        <div class="rain-analysis" id="rainAnalysis">
+                            <!-- Rain analysis bars will be dynamically added here -->
+                        </div>
+                    </div>
+                    <div class="card leaderboard-card hover-card">
+                        <h3>Leaderboard</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Name</th>
+                                    <th>Points</th>
+                                </tr>
+                            </thead>
+                            <tbody id="leaderboardBody">
+                                <!-- Leaderboard data will be dynamically added here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="card map-card hover-card">
+                        <h3>Weather Map</h3>
+                        <div class="map-placeholder" id="weatherMap">
+                            <img src="../Images/hurricane.png" width="500" height="400">
+                            <!-- <p>Extended Weather Map</p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
